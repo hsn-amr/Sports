@@ -143,8 +143,7 @@ class SportsTableViewController: UITableViewController {
     
     // delete
     func deleteSport(at index: Int){
-        let item = sports[index]
-        context.delete(item)
+        context.delete(sports[index])
         if saveChanges() {
             sports.remove(at: index)
             tableView.reloadData()
